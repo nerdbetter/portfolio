@@ -46,6 +46,10 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-.headNav{
-  display: none;
+a{
+	text-decoration: none;
+	color: black;
+}
+button {
+  border:none;
 }
