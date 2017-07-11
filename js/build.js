@@ -7,3 +7,8 @@ function Project(preview, name, src, languages){
   this.languages = languages;
   this.authors = authors;
 };
+
+Project.prototype.toHtml = function() {
+  var $Projects = $('article.template').clone();
+  $Projects.toggleClass('template');
+};
