@@ -1,14 +1,18 @@
 ('use strict');
 
-function Project(preview, name, src, languages){
-  this.preview = preview;
-  this.name = name;
-  this.source = src;
-  this.languages = languages;
-  this.authors = authors;
+var projects = [];
+function Project(preview, title, src, languages, authors, description){
+  this.preview = rawData.preview;
+  this.title = rawData.title;
+  this.source = rawData.source;
+  this.languages = rawData.languages;
+  this.authors = rawData.authors;
+  this.description = rawData.description;
 };
 
 Project.prototype.toHtml = function() {
   var $Projects = $('article.template').clone();
   $Projects.toggleClass('template');
+
+
 };
