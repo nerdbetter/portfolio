@@ -1,16 +1,16 @@
 .mainNav{
-  display: none;
   font-size: 30px;
+  display: none;
 }
 .fa-bars{
   font-size: 30px;
   padding: 20px;
-  background: none;
-
 }
 .fa-times{
-  display: none;
   background: none;
   font-size: 30px;
   padding: 20px;
+}
+.template{
+  display: none;
 }
