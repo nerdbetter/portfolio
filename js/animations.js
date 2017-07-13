@@ -9,7 +9,7 @@ $('.navList li a').on('click',function(){
   event.preventDefault();
   var activeTab = $(this).data('content');
   console.log(activeTab);
-  $('.tab-content').hide();
+  $('.tab-content').fadeOut();
   var makeIDforTab = '#' + activeTab;
-  $(makeIDforTab).show();
+  $(makeIDforTab).fadeIn();
 });
