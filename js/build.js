@@ -14,8 +14,9 @@ function Project(rawDataObj){
 Project.prototype.toHtml = function() {
   var $newProject = $('article.template').clone();
   $newProject.toggleClass('template');
-  $newProject.find('.preview').attr('src', this.preview);
+
   $newProject.find('href').attr('href', this.source);
+  $newProject.find('a').text(this.source);
   $newProject.find('h1').text(this.title);
   $newProject.find('h2').text(this.authors);
   $newProject.find('h3').text(this.languages);

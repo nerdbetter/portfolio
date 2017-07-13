@@ -51,7 +51,7 @@ table {
 	cursor: pointer;
 }
 body{
-	background-color: skyblue;
+	background-color: #f9be00;
 }
 img{
 	max-width: 100%;
@@ -59,4 +59,12 @@ img{
 a{
 	text-decoration: none;
 	color: black;
+}
+article{
+  width: 75%;
+  margin: auto;
+  background-color: #00C3B3;
+	border: 5px solid #024C5A;
+	border-radius: 25px;
+	padding: 25px;
 }
