@@ -13,3 +13,7 @@ $('.navList li a').on('click',function(){
   var makeIDforTab = '#' + activeTab;
   $(makeIDforTab).fadeIn();
 });
+$(document).ready(function(){
+  $('.tab-content').hide();
+  $('#home').show();
+});
