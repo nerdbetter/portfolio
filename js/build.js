@@ -2,13 +2,10 @@
 
 var projects = [];
 
-function Project(rawDataObj){
-  this.preview = rawDataObj.preview;
-  this.title = rawDataObj.title;
-  this.source = rawDataObj.source;
-  this.languages = rawDataObj.languages;
-  this.authors = rawDataObj.authors;
-  this.description = rawDataObj.description;
+function Project (rawDataObject) {
+  for (key in rawDataObject) {
+    this[key] = rawDataObject[key];
+  }
 };
 
 Project.prototype.toHtml = function() {
