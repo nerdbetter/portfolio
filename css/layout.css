@@ -1,10 +1,22 @@
 .mainNav{
+  font-family: 'Righteous', cursive;
   font-size: 30px;
   display: none;
+  text-shadow:
+   -1px -1px 0 #78191F,
+    1px -1px 0 #78191F,
+    -1px 1px 0 #78191F,
+     1px 1px 0 #78191F;
 }
 .fa-bars{
   font-size: 30px;
   padding: 20px;
+  color: #FA2E43;
+  text-shadow:
+   -1px -1px 0 #78191F,
+    1px -1px 0 #78191F,
+    -1px 1px 0 #78191F,
+     1px 1px 0 #78191F;
 }
 .fa-times{
   background: none;
