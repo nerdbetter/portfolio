@@ -26,3 +26,15 @@
 .template{
   display: none;
 }
+.headShot{
+  margin: auto;
+  height:auto;
+  padding-bottom: 50%;
+  width: 50%;
+  border-radius: 50%;
+  background-image: url('../images/headShot.JPG');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+}
