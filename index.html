@@ -10,6 +10,18 @@
   <link rel="stylesheet" href="css/module.css">
   <link rel="stylesheet" href="css/state.css">
 
+  <script id="project-template" type="text/x-handlebars-template">
+      <div id='projects'>
+        <article class='template'>
+          <div class='preview'><img src='{{preview}}'</div>
+          <h1>{{title}}</h1>
+          <h2>{{authors}}</h2>
+          <i class="fa fa-github-alt" aria-hidden="true"><a href='{{source}}'>{{source}}</a></i>
+          <h3>{{languages}}</h3>
+          <p>{{description}}</p>
+        </article>
+      </div>
+  </script>
 </head>
 <body>
   <div class ='headShotWrap'>
@@ -38,9 +50,9 @@
     <div></div>
   </section>
 
-  <script id="project-template" type="text/x-handlebars-template">
-    <section class='tab-content' id='projects'>
-      <div id='projects'>
+  <section class='tab-content' id='projects'>
+    <script id="project-template" type="text/x-handlebars-template">
+      <div id='project'>
         <article class='template'>
           <div class='preview'><img src='{{preview}}'</div>
           <h1>{{title}}</h1>
@@ -50,8 +62,8 @@
           <p>{{description}}</p>
         </article>
       </div>
-    </section>
-  </script>
+    </script>
+  </section>
 
   <script
   src="https://code.jquery.com/jquery-3.2.1.min.js"

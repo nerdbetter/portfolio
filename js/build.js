@@ -22,4 +22,5 @@ rawData.forEach(function(projectObject) {
 projects.forEach(function(project) {
   console.log(project);
   $('#projects').append(project.toHtml());
+
 });
