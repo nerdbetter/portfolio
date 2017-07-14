@@ -9,16 +9,9 @@ function Project (rawDataObject) {
 };
 
 Project.prototype.toHtml = function() {
-  var $newProject = $('article.template').clone();
-  $newProject.toggleClass('template');
-
-  $newProject.find('href').attr('href', this.source);
-  $newProject.find('a').text(this.source);
-  $newProject.find('h1').text(this.title);
-  $newProject.find('h2').text(this.authors);
-  $newProject.find('h3').text(this.languages);
-  $newProject.find('p').text(this.description);
-  return $newProject;
+  var template = $('#project-template').html();
+  var templateRender = Handlebars.compile(template);
+  return templateRender(this);
 };
 
 rawData.forEach(function(projectObject) {
