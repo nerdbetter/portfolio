@@ -1,12 +1,16 @@
 .mainNav{
   font-family: 'Righteous', cursive;
   font-size: 30px;
-  display: none;
+  max-height: 0px;
+  overflow: hidden;
   text-shadow:
    -1px -1px 0 #78191F,
     1px -1px 0 #78191F,
     -1px 1px 0 #78191F,
      1px 1px 0 #78191F;
+    transition-property: all;
+   	transition-duration: .5s;
+   	transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
 }
 .fa-bars{
   font-size: 30px;

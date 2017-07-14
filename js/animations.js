@@ -1,7 +1,7 @@
 ('use strict');
 
 $('.toggleMenu').on('click', function(){
-  $('.mainNav').slideToggle('fast').toggleClass('show');
+  $('.mainNav').toggleClass('show');
   $('.toggleMenu').toggleClass('fa-bars').toggleClass('fa-times');
 });
 
