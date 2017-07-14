@@ -10,15 +10,28 @@
   <link rel="stylesheet" href="css/module.css">
   <link rel="stylesheet" href="css/state.css">
 
+  <script id="project-template" type="text/x-handlebars-template">
+      <div id='projects'>
+        <article class='template'>
+          <div class='preview'><img src='{{preview}}'</div>
+          <h1>{{title}}</h1>
+          <h2>{{authors}}</h2>
+          <i class="fa fa-github-alt" aria-hidden="true"><a href='{{source}}'>{{source}}</a></i>
+          <h3>{{languages}}</h3>
+          <p>{{description}}</p>
+        </article>
+      </div>
+  </script>
 </head>
 <body>
+  <div class ='headShotWrap'>
+    <div class='headShot' id='headShot'>
+    </div>
+    <h1>Jason Logan</h1>
+  </div>
   <i class="fa fa-bars clickable toggleMenu" aria-hidden="true"></i>
   <section class='tab-content' id='home'>
-    <div>
-      <div class='headShot' id='headShot'>
-      </div>
-      <h1>Jason Logan</h1>
-    </div>
+
   </section>
   <nav class='mainNav'>
     <ul class='navList'>
@@ -36,22 +49,27 @@
   <section class='tab-content' id='about'>
     <div></div>
   </section>
+
   <section class='tab-content' id='projects'>
-    <div id='projects'>
-      <article class='template'>
-        <div class='preview'></div>
-        <h1></h1>
-        <h2></h2>
-        <i class="fa fa-github-alt" aria-hidden="true"><a href=''></a></i>
-        <h3></h3>
-        <p></p>
-      </article>
-    </div>
+    <script id="project-template" type="text/x-handlebars-template">
+      <div id='project'>
+        <article class='template'>
+          <div class='preview'><img src='{{preview}}'</div>
+          <h1>{{title}}</h1>
+          <h2>{{authors}}</h2>
+          <i class="fa fa-github-alt" aria-hidden="true"><a href='{{source}}'>{{source}}</a></i>
+          <h3>{{languages}}</h3>
+          <p>{{description}}</p>
+        </article>
+      </div>
+    </script>
   </section>
+
   <script
   src="https://code.jquery.com/jquery-3.2.1.min.js"
   integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
   crossorigin="anonymous"></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.js'></script>
   <script src='js/animations.js'></script>
   <script src="js/projectObjects.js"></script>
   <script src="js/build.js"></script>

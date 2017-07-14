@@ -2,26 +2,16 @@
 
 var projects = [];
 
-function Project(rawDataObj){
-  this.preview = rawDataObj.preview;
-  this.title = rawDataObj.title;
-  this.source = rawDataObj.source;
-  this.languages = rawDataObj.languages;
-  this.authors = rawDataObj.authors;
-  this.description = rawDataObj.description;
+function Project (rawDataObject) {
+  for (key in rawDataObject) {
+    this[key] = rawDataObject[key];
+  }
 };
 
 Project.prototype.toHtml = function() {
-  var $newProject = $('article.template').clone();
-  $newProject.toggleClass('template');
-
-  $newProject.find('href').attr('href', this.source);
-  $newProject.find('a').text(this.source);
-  $newProject.find('h1').text(this.title);
-  $newProject.find('h2').text(this.authors);
-  $newProject.find('h3').text(this.languages);
-  $newProject.find('p').text(this.description);
-  return $newProject;
+  var template = $('#project-template').html();
+  var templateRender = Handlebars.compile(template);
+  return templateRender(this);
 };
 
 rawData.forEach(function(projectObject) {
@@ -32,4 +22,5 @@ rawData.forEach(function(projectObject) {
 projects.forEach(function(project) {
   console.log(project);
   $('#projects').append(project.toHtml());
+
 });
