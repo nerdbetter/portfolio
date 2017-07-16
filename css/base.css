@@ -62,7 +62,7 @@ a{
 }
 article{
   width: 75%;
-  margin: auto;
+  margin: 10px auto;
   background-color: #00C3B3;
 	border: 5px solid #024C5A;
 	border-radius: 25px;

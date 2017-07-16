@@ -25,7 +25,7 @@ article h3{
 }
 @media (min-width: 768px){
   .mainNav{
-    display: block;
+    max-height: 200px;
   }
   .navList{
     display: flex;
