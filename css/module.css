@@ -16,32 +16,3 @@ article a{
 article h3{
   font-weight: bold;
 }
-@media (min-width: 1200px) {
-  .headShot{
-    padding-bottom: 25%;
-    width: 25%;
-  }
-
-}
-@media (min-width: 768px){
-  .mainNav{
-    max-height: 200px;
-  }
-  .navList{
-    display: flex;
-    justify-content: space-around;
-  }
-  .navList li{
-    display: inline-block;
-    padding: 20px;
-  }
-  .fa-bars{
-    display: none;
-  }
-  .fa-times{
-    display: none;
-  }
-  .headShot{
-    padding-bottom: 35%;
-    width: 35%;
-}

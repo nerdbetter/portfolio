@@ -8,19 +8,19 @@
     1px -1px 0 #78191F,
     -1px 1px 0 #78191F,
      1px 1px 0 #78191F;
-    transition-property: all;
-   	transition-duration: .5s;
-   	transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+  transition-property: all;
+  transition-duration: .5s;
+  transition-timing-function: ease;
 }
 .fa-bars{
   font-size: 30px;
   padding: 20px;
   color: #FA2E43;
   text-shadow:
-   -1px -1px 0 #78191F,
+    -1px -1px 0 #78191F,
     1px -1px 0 #78191F,
     -1px 1px 0 #78191F,
-     1px 1px 0 #78191F;
+    1px 1px 0 #78191F;
 }
 .fa-times{
   background: none;
@@ -46,8 +46,8 @@
   font-size: 72px;
   color: #FA2E43;
   text-shadow:
-   -1px -1px 0 #78191F,
-    1px -1px 0 #78191F,
-    -1px 1px 0 #78191F,
-     1px 1px 0 #78191F;
+  -1px -1px 0 #78191F,
+  1px -1px 0 #78191F,
+  -1px 1px 0 #78191F,
+  1px 1px 0 #78191F;
 }
