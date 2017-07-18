@@ -14,13 +14,22 @@ Project.prototype.toHtml = function() {
   return templateRender(this);
 };
 
-rawData.forEach(function(projectObject) {
-  projects.push(new Project(projectObject));
-  console.log(projects);
-});
-
-projects.forEach(function(project) {
-  console.log(project);
-  $('#projects').append(project.toHtml());
-
-});
+function handleShowProjects() {
+  $.getJSON('data/projectObject.json')
+  .then(
+    function(data) {
+      console.log(data);
+      localStorage.setItem('projects', JSON.stringify(data));
+      data.forEach(function(projectObject) {
+        projects.push(new Project(projectObject));
+        console.log('projects array being built', projects);
+      });
+      projects.forEach(function(ourNewProjectObject){
+        $('#projects').append(ourNewProjectObject.toHtml());
+      });
+    },
+  function(err) {
+    console.error(err);
+  });
+}
+handleShowProjects();
