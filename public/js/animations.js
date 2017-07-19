@@ -12,6 +12,8 @@ $('.navList li a').on('click',function(){
   $('.tab-content').fadeOut();
   var makeIDforTab = '#' + activeTab;
   $(makeIDforTab).fadeIn();
+  //$(this).toggleClass('hideActive');
+
 });
 $(document).ready(function(){
   $('.tab-content').hide();
