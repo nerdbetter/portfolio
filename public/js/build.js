@@ -15,7 +15,7 @@ Project.prototype.toHtml = function() {
 };
 
 function handleShowProjects() {
-  $.getJSON('data/projectObject.json')
+  $.getJSON('../data/projectObject.json')
   .then(
     function(data) {
       console.log(data);
