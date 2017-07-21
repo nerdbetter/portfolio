@@ -1,4 +1,5 @@
 .hideActive{
+  /*display:none*/
 }
 .show{
   max-height: 100px;
