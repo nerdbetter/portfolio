@@ -1,5 +1,4 @@
 .hideActive{
-  
 }
 .show{
   max-height: 100px;
@@ -39,4 +38,11 @@
   .headShot{
     padding-bottom: 75%;
     width: 75%;
+  }
+  .fullProjects{
+    font-size: 5vw;
+  }
+  .fullAbout{
+    font-size: 5vw;
+  }
 }

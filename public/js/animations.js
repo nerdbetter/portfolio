@@ -9,13 +9,13 @@ $('.navList li').on('click',function(){
   event.preventDefault();
   var activeTab = $(this).data('content');
   console.log(activeTab);
-  $('.tab-content').fadeOut();
+  $('.tab-content').hide();
   var makeIDforTab = '#' + activeTab;
-  $(makeIDforTab).fadeIn();
-  $(this).toggleClass('hideActive');
+  $(makeIDforTab).show();
+  //$(this).toggleClass('hideActive');
 
 });
 $(document).ready(function(){
-  //$('.tab-content').hide();
+  $('.tab-content').hide();
   //$('#home').show();
 });
