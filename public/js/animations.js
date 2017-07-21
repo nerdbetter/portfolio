@@ -5,17 +5,17 @@ $('.toggleMenu').on('click', function(){
   $('.toggleMenu').toggleClass('fa-bars').toggleClass('fa-times');
 });
 
-$('.navList li a').on('click',function(){
+$('.navList li').on('click',function(){
   event.preventDefault();
   var activeTab = $(this).data('content');
   console.log(activeTab);
   $('.tab-content').fadeOut();
   var makeIDforTab = '#' + activeTab;
   $(makeIDforTab).fadeIn();
-  //$(this).toggleClass('hideActive');
+  $(this).toggleClass('hideActive');
 
 });
 $(document).ready(function(){
-  $('.tab-content').hide();
-  $('#home').show();
+  //$('.tab-content').hide();
+  //$('#home').show();
 });
