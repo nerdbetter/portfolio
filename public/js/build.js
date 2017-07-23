@@ -3,13 +3,13 @@
 var app = app || {};
 
 ((module)=>{
-  var projects = [];
 
   function Project (rawDataObject) {
     for (key in rawDataObject) {
       this[key] = rawDataObject[key];
     }
   };
+  Project.all = [];
 
   Project.prototype.toHtml = function() {
     var template = $('#project-template').html();
@@ -17,17 +17,18 @@ var app = app || {};
     return templateRender(this);
   };
 
-  function handleShowProjects() {
+  Project.prototype.handleShowProjects = function() {
     $.getJSON('data/projectObject.json')
     .then(
       function(data) {
         console.log(data);
         localStorage.setItem('projects', JSON.stringify(data));
-        data.forEach(function(projectObject) {
-          projects.push(new Project(projectObject));
-          console.log('projects array being built', projects);
+        Project.all= project.map(function(element) {
+          return new Project(element);
+          console.log('projects array being built', Projects.all);
         });
-        projects.forEach(function(ourNewProjectObject){
+        Project.all = project.map(function(ourNewProjectObject){
+          return new Project(ourNewProjectObject);
           $('#projects').append(ourNewProjectObject.toHtml());
         });
       },
@@ -36,4 +37,5 @@ var app = app || {};
     });
   }
   module.project = Project
+  //app.Project.handleShowProjects();
 })(app);
