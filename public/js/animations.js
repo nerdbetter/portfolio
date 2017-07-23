@@ -5,7 +5,7 @@ $('.toggleMenu').on('click', function(){
   $('.toggleMenu').toggleClass('fa-bars').toggleClass('fa-times');
 });
 
-$('.navList li a').on('click',function(){
+$('nav a').on('click',function(){
   event.preventDefault();
   var activeTab = $(this).data('content');
   console.log(activeTab);

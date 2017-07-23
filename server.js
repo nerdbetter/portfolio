@@ -3,7 +3,6 @@
 const express = require('express');
 const PORT = 3000;
 const app = express();
-const bodyParser = require('body-parser').urlencoded({extended: true});
 
 app.use(express.static('./public'));
 
