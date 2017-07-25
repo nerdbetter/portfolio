@@ -6,9 +6,7 @@ const app = express();
 
 app.use(express.static('./public'));
 
-app.get('*', function(request, response){
-  response.status(404).send('404 Page not found');
-});
+app.get('*', (request, response) => response.sendFile('index.html', {root: './public'}));
 
 app.listen(PORT, function() {
   console.log('express is listening on port ' + PORT);
