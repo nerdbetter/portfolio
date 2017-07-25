@@ -11,7 +11,8 @@ var app = app || {};
     var makeIDforTab = '#' + activeTab;
     $(makeIDforTab).fadeIn();
     //$(this).toggleClass('hideActive');
-    app.Project.buildProjects();
+    app.Project.showProjects();
+
   }
   module.projectController = projectController;
 })(app);
