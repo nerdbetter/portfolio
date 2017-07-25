@@ -1,3 +1,6 @@
+.hideActive{
+  display: none;
+}
 .show{
   max-height: 100px;
 }
@@ -11,6 +14,13 @@
 @media (min-width: 768px){
   .mainNav{
     max-height: 200px;
+    display: none;
+  }
+  .fullLayout{
+    display: block;
+  }
+  .mobileLayout{
+    display: none;
   }
   .navList{
     display: flex;
@@ -27,6 +37,6 @@
     display: none;
   }
   .headShot{
-    padding-bottom: 35%;
-    width: 35%;
+    padding-bottom: 75%;
+    width: 75%;
 }

@@ -1,12 +1,12 @@
-('use strict');
+'use strict';
 
-var projects = [];
+var app = app || {};
 
 function Project (rawDataObject) {
-  for (key in rawDataObject) {
+  for (var key in rawDataObject) {
     this[key] = rawDataObject[key];
   }
-};
+}
 
 Project.prototype.toHtml = function() {
   var template = $('#project-template').html();
@@ -14,22 +14,24 @@ Project.prototype.toHtml = function() {
   return templateRender(this);
 };
 
-function handleShowProjects() {
+Project.all = [];
+
+Project.prototype.handleShowProjects = function() {
   $.getJSON('data/projectObject.json')
   .then(
     function(data) {
       console.log(data);
       localStorage.setItem('projects', JSON.stringify(data));
-      data.forEach(function(projectObject) {
-        projects.push(new Project(projectObject));
-        console.log('projects array being built', projects);
+      Project.all = data.map(function(element) {
+        console.log('projects array being built', Project.all);
+        return new Project(element);
       });
-      projects.forEach(function(ourNewProjectObject){
+      Project.all = data.map(function(ourNewProjectObject){
         $('#projects').append(ourNewProjectObject.toHtml());
+        return new Project(ourNewProjectObject);
       });
     },
   function(err) {
     console.error(err);
   });
-}
-handleShowProjects();
+};
