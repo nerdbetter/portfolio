@@ -4,9 +4,9 @@ var app = app || {};
 (function(module) {
   const aboutController = {};
 
-  aboutController.showHome = () => {
+  aboutController.showAbout = () => {
     $('.tab-content').hide();
-    $('#projects').fadeIn();
+    $('#about').fadeIn();
   }
   module.aboutController = aboutController;
 })(app);

@@ -1,7 +1,7 @@
 'use strict';
 var app = app || {};
 
-page('/', app.homeController.showProject);
+page('/', app.homeController.showHome);
 page('/about', app.aboutController.showAbout);
 page('/project', app.projectController.showProject);
 page('*', function(){

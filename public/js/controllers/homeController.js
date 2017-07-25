@@ -6,7 +6,7 @@ var app = app || {};
 
   homeController.showHome = () => {
     $('.tab-content').hide();
-    $('#projects').fadeIn();
+    $('#home').fadeIn();
   }
   module.homeController = homeController;
 })(app);
