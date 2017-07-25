@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start":"xdg-open http://localhost:3000 && node server.js"
+    "start": "xdg-open http://localhost:3000 && node server.js"
   },
   "repository": {
     "type": "git",
@@ -21,5 +21,8 @@
     "body-parser": "^1.17.2",
     "express": "^4.15.3",
     "pg": "^7.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.11.0"
   }
 }
