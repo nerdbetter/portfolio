@@ -5,8 +5,13 @@ var app = app || {};
   const projectController = {};
 
   projectController.showProject = () => {
-    $('.tab-content').hide();
-    $('#projects').fadeIn();
+    var activeTab = $(this).data('content');
+    console.log(activeTab);
+    $('.tab-content').fadeOut();
+    var makeIDforTab = '#' + activeTab;
+    $(makeIDforTab).fadeIn();
+    //$(this).toggleClass('hideActive');
+    app.Project.buildProjects();
   }
   module.projectController = projectController;
 })(app);
