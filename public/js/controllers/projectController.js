@@ -5,14 +5,10 @@ var app = app || {};
   const projectController = {};
 
   projectController.showProject = () => {
-    var activeTab = $(this).data('content');
-    console.log(activeTab);
-    $('.tab-content').fadeOut();
-    var makeIDforTab = '#' + activeTab;
-    $(makeIDforTab).fadeIn();
-    //$(this).toggleClass('hideActive');
+    app.repos.requestRepos(app.repoView.index);
     app.Project.showProjects();
-
+    $('.tab-content').fadeOut();
+    $('#projects').fadeIn();
   }
   module.projectController = projectController;
 })(app);
