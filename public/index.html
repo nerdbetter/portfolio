@@ -66,10 +66,26 @@
     <div><h1>About Yo</h1></div>
   </section>
   <section class='tab-content' id='projects'>
+    <script id="repo-template" type="text/x-handlebars-template">
+      <ul class='repoItems'>
+        <li>
+          <a href="{{html_url}}" target="_blank">
+            <h3>{{name}}</h3>
+          </a>
+          <p>Description: {{description}}</p>
+          <p>Language: {{language}}</p>
+          <p>Created: {{created_at}}</p>
+          <p>Last updated: {{pushed_at}}</p>
+          {{#if watchers_count}}
+            <p>{{watchers_count}} watching this repo</p>
+          {{/if}}
+        </li>
+      </ul>
+    </script>
     <script id="project-template" type="text/x-handlebars-template">
       <div id='project'>
         <article class='template'>
-          <div class='preview'><img src='{{preview}}'</div>
+          <div class='preview'><img src='{{preview}}' /></div>
           <h1>{{title}}</h1>
           <h2>{{authors}}</h2>
           <i class="fa fa-github-alt" aria-hidden="true"><a href='{{source}}'>{{source}}</a></i>
@@ -85,9 +101,11 @@
   integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
   crossorigin="anonymous"></script>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.js'></script>
-  <script src='/js/animations.js'></script>
   <script src="/js/build.js"></script>
+  <script src="/js/animations.js"></script>
   <script src='/vendor/page.js'></script>
+  <script src="/js/model/repo.js"></script>
+  <script src="/js/views/viewRepo.js"></script>
   <script src="/js/controllers/projectController.js"></script>
   <script src="/js/controllers/aboutController.js"></script>
   <script src ="/js/controllers/homeController.js"></script>

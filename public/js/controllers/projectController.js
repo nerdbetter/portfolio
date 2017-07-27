@@ -5,7 +5,9 @@ var app = app || {};
   const projectController = {};
 
   projectController.showProject = () => {
-    $('.tab-content').hide();
+    app.repos.requestRepos(app.repoView.index);
+    app.Project.showProjects();
+    $('.tab-content').fadeOut();
     $('#projects').fadeIn();
   }
   module.projectController = projectController;

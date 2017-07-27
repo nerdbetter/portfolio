@@ -5,8 +5,11 @@ var app = app || {};
   const aboutController = {};
 
   aboutController.showAbout = () => {
-    $('.tab-content').hide();
-    $('#about').fadeIn();
+    var activeTab = $(this).data('content');
+    console.log(activeTab);
+    $('.tab-content').fadeOut();
+    var makeIDforTab = '#' + activeTab;
+    $(makeIDforTab).fadeIn();
   }
   module.aboutController = aboutController;
 })(app);
