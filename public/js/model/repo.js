@@ -7,11 +7,7 @@ var app = app || {};
   repos.all = [];
 
   repos.requestRepos = function(callback) {
-    $.ajax({
-      url: 'http://api.github.com/users/nerdbetter/repos',
-      method: 'GET',
-
-    })
+    $.get('/github/user/repos')
       .then(
         data => {
           data.forEach(repo => repos.all.push(repo));

@@ -66,21 +66,20 @@
     <div><h1>About Yo</h1></div>
   </section>
   <section class='tab-content' id='projects'>
+    <ul id='repoItems'></ul>
     <script id="repo-template" type="text/x-handlebars-template">
-      <ul class='repoItems'>
-        <li>
-          <a href="{{html_url}}" target="_blank">
-            <h3>{{name}}</h3>
-          </a>
-          <p>Description: {{description}}</p>
-          <p>Language: {{language}}</p>
-          <p>Created: {{created_at}}</p>
-          <p>Last updated: {{pushed_at}}</p>
-          {{#if watchers_count}}
-            <p>{{watchers_count}} watching this repo</p>
-          {{/if}}
-        </li>
-      </ul>
+      <li>
+        <a href="{{html_url}}" target="_blank">
+          <h3>{{name}}</h3>
+        </a>
+        <p>Description: {{description}}</p>
+        <p>Language: {{language}}</p>
+        <p>Created: {{created_at}}</p>
+        <p>Last updated: {{pushed_at}}</p>
+        {{#if watchers_count}}
+          <p>{{watchers_count}} watching this repo</p>
+        {{/if}}
+      </li>
     </script>
     <script id="project-template" type="text/x-handlebars-template">
       <div id='project'>
